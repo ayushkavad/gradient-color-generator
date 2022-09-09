@@ -15,7 +15,8 @@ const randColor = () => {
 colorCode.textContent = "";
 
 btn.addEventListener("click", () => {
-  colorCode.textContent = randColor();
   colorBox.style.backgroundColor = randColor();
-  colorBox.style.backgroundImage = `linear-gradient(120deg, ${randColor()}, ${randColor()})`;
+  const newColor =
+    (colorBox.style.backgroundImage = `linear-gradient(120deg, ${randColor()}, ${randColor()})`);
+  colorCode.textContent = newColor;
 });
